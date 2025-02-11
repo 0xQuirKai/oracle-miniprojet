@@ -344,21 +344,10 @@ app.post('/login', async(req, res) => {
 
 
 // Example of a protected route (requires valid JWT token)
-app.get('/protected', (req, res) => {
-    const token = req.headers['authorization'] // Extract the username from the token
-    console.log(decodeToken(token))
-
-    res.status(200).json({
-        message: 'Protected route accessed',
-    });
-    res.status(500).json({
-        message: "no"
-    })
-});
 
 
 // Start the server
 const PORT = 5445;
-app.listen(PORT, '192.168.8.154', () => {
+app.listen(PORT, '192.168.166.82', () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
